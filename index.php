@@ -1,4 +1,6 @@
 <?php
+    // Creo una variabile con un paragrafo di testo
+    $text = 'Ciao Php sei molto bello';
 
 ?>
 
@@ -11,6 +13,10 @@
     <title>PHP Badwords</title>
 </head>
 <body>
-    
+    <!-- Stampo a schermo il paragrafo creato -->
+    <p><?php echo $text; ?></p>
+
+    <!-- Stampo a schermo la lunghezza del paragrafo creato -->
+    <p>Questa è la lunghezza del paragrafo che ho creato: <?php echo strlen($text); ?></p>
 </body>
 </html>
