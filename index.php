@@ -1,6 +1,12 @@
 <?php
     // Creo una variabile con un paragrafo di testo
-    $text = 'Ciao Php sei molto bello';
+    $text = 'Ciao Php ora dico chi cazzo ti ha detto che volevamo imparare ad usarti, tornatene da dove cazzo sei venuto!';
+
+    //Creo la variabile che conterrà la parola che l'utente vuole censurare
+    $censoredWord = $_GET['censoredWord'];
+
+    // Creo la variabile che conterrà il testo precedente con le parole censurate
+    $censoredText = str_replace($censoredWord, '***', $text);
 
 ?>
 
@@ -14,9 +20,15 @@
 </head>
 <body>
     <!-- Stampo a schermo il paragrafo creato -->
-    <p><?php echo $text; ?></p>
+    <p><?= $text; ?></p>
 
     <!-- Stampo a schermo la lunghezza del paragrafo creato -->
-    <p>Questa è la lunghezza del paragrafo che ho creato: <?php echo strlen($text); ?></p>
+    <p>Questa è la lunghezza del paragrafo che ho creato: <?= strlen($text); ?></p>
+
+    <!-- Stampo a schermo il paragrafo censurato -->
+    <p><?= $censoredText; ?></p>
+
+    <!-- Stampo a schermo la lunghezza del paragrafo censurato -->
+    <p>Questa è la lunghezza del paragrafo censurato: <?= strlen($censoredText); ?></p>
 </body>
 </html>
